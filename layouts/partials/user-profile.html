@@ -114,6 +114,10 @@
               </path>
             </svg>
           </a>
+           {{ if .Site.Params.mastodon }}
+          <a style="margin: 0 10px 10px 0;" href="https://mstdn.social/{{ .Site.Params.mastodon }}">
+            <img alt="@mastodon" width="32" height="32" src="{{ "images/mastodon.png" | absURL }}" class="avatar">
+          </a>
           {{ end }}
 
           {{ if .Site.Params.twitter}}
@@ -131,12 +135,6 @@
           {{ if .Site.Params.linkedin }}
           <a style="margin: 0 10px 10px 0;" href="https://linkedin.com/in/{{ .Site.Params.linkedin }}">
             <img alt="@linkedin" width="32" height="32" src="{{ "images/linkedin.png" | absURL }}" class="avatar">
-          </a>
-          {{ end }}
-
-          {{ if .Site.Params.mastodon }}
-          <a style="margin: 0 10px 10px 0;" href="https://mstdn.social/{{ .Site.Params.mastodon }}">
-            <img alt="@mastodon" width="32" height="32" src="{{ "images/mastodon.png" | absURL }}" class="avatar">
           </a>
           {{ end }}
 
